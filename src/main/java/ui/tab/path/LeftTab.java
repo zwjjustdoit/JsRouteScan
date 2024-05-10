@@ -2,6 +2,7 @@ package ui.tab.path;
 
 import burp.BurpExtender;
 import common.RightClickFunc;
+import core.Content.HostContent;
 import core.Content.RouteContent;
 import org.jdesktop.swingx.JXTable;
 import core.Interface.ContentClass;
@@ -100,10 +101,13 @@ public class LeftTab implements TabInterface, JXTableInterfae {
         JPopupMenu popupMenu = new JPopupMenu();
         JMenuItem DeleteMenuItem = new JMenuItem("Delete");
         JMenuItem ClearMenuItem = new JMenuItem("Clear");
+        JMenuItem PasteMenuItem = new JMenuItem("Paste");
         RightClickFunc.DeleteRoute(this.burp,DeleteMenuItem);
         RightClickFunc.CleanRoute(this.burp,ClearMenuItem);
+        RightClickFunc.PasteRoute(this.burp,PasteMenuItem);
         popupMenu.add(DeleteMenuItem);
         popupMenu.add(ClearMenuItem);
+        popupMenu.add(PasteMenuItem);
 
         this.jXTable.addMouseListener(new MouseAdapter() {
             @Override
@@ -122,7 +126,8 @@ public class LeftTab implements TabInterface, JXTableInterfae {
 
     @Override
     public ContentClass add(Object a) {
-        this.routeList.add((RouteContent)a);
+        RouteContent routeContent = new RouteContent((String) a);
+        this.routeList.add(routeContent);
         this.updateAll();
         return null;
     }
