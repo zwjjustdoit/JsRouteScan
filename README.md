@@ -58,6 +58,11 @@ scan面板用来展示请求的内容以及扫描的内容，此面板不会自�
 
 <img src="./img/scan.jpg">
 
+新增的粘贴功能就从任何复制过来的内容，在path栏下，右键粘贴，啪一下就好了
+
+![image](https://github.com/zwjjustdoit/JsRouteScan/assets/50495555/2d9cdbc0-92b6-424a-813d-d2a2f0106bf1)
+
+
 ## 提示
 
 ​	Recursion-Scan功能一定要注意PATH中的路由数量，没用的删一删再扫，递归扫描的请求数量是 目录层级*路由数量 的哦。
