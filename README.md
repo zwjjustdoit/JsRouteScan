@@ -3,6 +3,12 @@ Burpsuite - Js Route Scan 正则匹配获取响应中的路由进行探测或递
 
 ***
 
+## 背景
+选择另起炉灶的原因还得从遥远的故事开始：
+
+首先我在原作者那提交了issues，但是应对这个场景的能力不等人，于是自己手搓一个小功能
+
+![image](https://github.com/zwjjustdoit/JsRouteScan/assets/50495555/8dd2e1bb-768f-4c5b-91db-ffcfde3cba64)
 
 
 ## 感谢
@@ -55,14 +61,6 @@ scan面板用来展示请求的内容以及扫描的内容，此面板不会自�
 ## 提示
 
 ​	Recursion-Scan功能一定要注意PATH中的路由数量，没用的删一删再扫，递归扫描的请求数量是 目录层级*路由数量 的哦。
-## 更新计划
-* 自定义head头 2024-04-10 √
-* 添加自定义post或get参数
-* 配置文件在线更新？
-
-## 开心值
-
-[![Stargazers over time](https://starchart.cc/F6JO/JsRouteScan.svg?variant=adaptive)](https://starchart.cc/F6JO/JsRouteScan)
 
 ## 最后
 如有匹配正则、BUG、需求等欢迎提Issues
